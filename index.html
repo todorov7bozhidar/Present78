@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<title>Галерия с iframe</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 20px;
+    }
+    button {
+        margin: 5px;
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    iframe {
+        width: 90%;
+        height: 500px;
+        border: 2px solid black;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<h2>Отваряне на JPG файлове в iframe</h2>
+
+<button onclick="openImg('П4.jpg')">Отвори снимка 1</button>
+<button onclick="openImg('П3.jpg')">Отвори снимка 2</button>
+<button onclick="openImg('П2.jpg')">Отвори снимка 3</button>
+<button onclick="openImg('П1.jpg')">Отвори снимка 4</button>
+<button onclick="openImg('П5.jpg')">Отвори снимка 5</button>
+
+<iframe id="viewer"></iframe>
+
+<script>
+function openImg(file) {
+    document.getElementById('viewer').src = file;
+}
+</script>
+
+</body>
+</html>
